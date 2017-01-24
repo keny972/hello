@@ -1,0 +1,32 @@
+---------
+livre
+---------
+- id_livre    (INT(3), PK-AI)
+- titre       (VARCHAR(100))
+- auteur      (VARCHAR(100))
+
+---------
+emprunt
+---------
+- id_emprunt  (INT(3), PK-AI)
+- id_livre    (INT(3), FK)
+- id_abonne   (INT(3), FK)
+- date_sortie (DATE DEFAULT NULL)
+
+---------
+abonne
+---------
+- id_abonne   (INT(3), PK-AI)
+- prenom      (VARCHAR(20))
+
+CREATE DATABASE diw27_entreprise ;
+
+USE diw27_entreprise ;
+
+CREATE TABLE abonne (
+  id_abonne INT(3) NOT NULL AUTO_INCREMENT,
+  prenom VARCHAR(20) NOT NULL,
+  PRIMARY KEY (id_abonne)
+) ENGINE=InnoDB ;
+
+DESC abonne ;

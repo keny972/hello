@@ -1,0 +1,19 @@
+-----------
+   livre
+-----------
+- id_livre (INT(3), PK AI)
+- titre (VARCHAR(100))
+- auteur (VARCHAR(100))
+------------
+   emprunt
+------------
+- id emprunt (INT(3), PK AI)
+- id_lire (INT(3), FK)
+- id_abonne (INT(3), FK)
+- date_sortie (DATE)
+- date_retour (DATE DEFAULT NULL)
+-----------
+   abonne
+-----------
+- id_abonne (INT(3), PK AI)
+- prenom (VARCHAR(20))
